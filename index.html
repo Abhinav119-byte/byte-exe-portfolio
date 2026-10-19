@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#080b16">
+    <meta name="description" content="Meet Byte, a tiny robot trying to bring a forgotten digital universe back to life. Explore his inventions, discover secrets, and enter his digital world.">
+
+    <title>BYTE.exe — The Little Robot Inventor</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="background-grid" aria-hidden="true"></div>
+
+    <!-- NAVIGATION -->
+
+    <header class="navbar">
+        <a href="#home" class="logo" aria-label="Byte home">
+            <span class="logo-symbol">B</span>
+            <span>BYTE<span class="logo-dot">.exe</span></span>
+        </a>
+
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+            aria-controls="nav-links"
+        >
+            ☰
+        </button>
+
+        <nav class="nav-links" id="nav-links">
+            <a href="#about">ABOUT</a>
+            <a href="#projects">INVENTIONS</a>
+            <a href="#lab">BYTE'S LAB</a>
+            <button class="nav-terminal" id="open-terminal">
+                &gt; TERMINAL
+            </button>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO SECTION -->
+
+        <section class="hero section-container" id="home">
+
+            <div class="hero-content">
+
+                <div class="system-status">
+                    <span class="status-light"></span>
+                    SYSTEM ONLINE
+                    <span class="status-divider">/</span>
+                    VERSION 1.0.26
+                </div>
+
+                <p class="eyebrow">WELCOME TO MY LITTLE UNIVERSE</p>
+
+                <h1>
+                    HELLO,<br>
+                    <span class="accent-text">HUMAN!</span><br>
+                    I'M BYTE<span class="cursor">_</span>
+                </h1>
+
+                <p class="hero-description">
+                    A tiny robot with big ideas, a questionable battery,
+                    and one impossible mission:
+                    <span class="highlight">
+                        bringing a forgotten universe back to life.
+                    </span>
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="button button-primary">
+                        <span>EXPLORE MY WORLD</span>
+                        <span aria-hidden="true"> ↘</span>
+                    </a>
+
+                    <a href="#about" class="button button-secondary">
+                        MEET BYTE
+                    </a>
+                </div>
+
+                <div class="hero-footer">
+                    <span>LOCATION: THE LOST INTERNET</span>
+                    <span class="footer-coordinate">37° PIXEL / 404° DREAM</span>
+                </div>
+
+            </div>
+
+            <!-- ORIGINAL CSS PIXEL ROBOT -->
+
+            <div class="robot-scene" id="robot-scene">
+
+                <div class="scene-label scene-label-top">
+                    <span class="tiny-square"></span>
+                    SPECIMEN_001
+                </div>
+
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+
+                <div class="floating-symbol symbol-one">+</div>
+                <div class="floating-symbol symbol-two">*</div>
+                <div class="floating-symbol symbol-three">01</div>
+                <div class="floating-symbol symbol-four">&lt;/&gt;</div>
+
+                <div class="robot" id="byte-robot" role="img" aria-label="Byte, a small pixel robot with glowing cyan eyes">
+
+                    <div class="robot-antenna">
+                        <div class="antenna-tip"></div>
+                        <div class="antenna-stem"></div>
+                    </div>
+
+                    <div class="robot-head">
+
+                        <div class="robot-ear ear-left"></div>
+                        <div class="robot-ear ear-right"></div>
+
+                        <div class="robot-face">
+
+                            <div class="robot-eyes">
+                                <span class="robot-eye"></span>
+                                <span class="robot-eye"></span>
+                            </div>
+
+                            <div class="robot-mouth"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="robot-neck"></div>
+
+                    <div class="robot-body">
+
+                        <div class="body-panel">
+
+                            <div class="body-indicator"></div>
+
+                            <div class="body-heart">
+                                <span>♥</span>
+                            </div>
+
+                            <div class="body-code">B-001</div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="robot-arms">
+                        <div class="robot-arm arm-left"></div>
+                        <div class="robot-arm arm-right"></div>
+                    </div>
+
+                    <div class="robot-legs">
+                        <div class="robot-leg leg-left"></div>
+                        <div class="robot-leg leg-right"></div>
+                    </div>
+
+                </div>
+
+                <div class="robot-shadow"></div>
+
+                <div class="robot-speech" id="robot-speech" aria-live="polite">
+                    BEEP BOOP! HUMAN DETECTED.
+                </div>
+
+                <div class="scene-label scene-label-bottom">
+                    <span class="status-light"></span>
+                    BYTE IS CURIOUS ABOUT YOU
+                </div>
+
+            </div>
+
+            <a href="#about" class="scroll-indicator" aria-label="Scroll to discover Byte">
+                <span>SCROLL TO DISCOVER</span>
+                <span class="scroll-arrow">↓</span>
+            </a>
+
+        </section>
+
+
+        <!-- ABOUT BYTE -->
+
+        <section class="about section-container" id="about">
+
+            <div class="section-heading">
+                <span class="section-number">01 / WHO AM I?</span>
+                <h2>A LITTLE BOT.<br><span class="accent-text">A BIG PURPOSE.</span></h2>
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-story panel">
+
+                    <div class="panel-header">
+                        <span>BYTE_LOG.TXT</span>
+                        <span class="panel-dots">● ● ●</span>
+                    </div>
+
+                    <div class="story-content">
+                        <p class="story-intro">
+                            Somewhere in a universe nobody remembers...
+                        </p>
+
+                        <p>
+                            I woke up in an abandoned digital world.
+                            The servers were silent, the pixels were fading,
+                            and every connection led to nowhere.
+                        </p>
+
+                        <p>
+                            I don't remember who built me. I don't know
+                            why everyone disappeared.
+                        </p>
+
+                        <p class="story-highlight">
+                            But if I can build something new, maybe
+                            this universe isn't lost after all.
+                        </p>
+
+                        <button class="text-button" id="read-more">
+                            [ READ MY FULL STORY + ]
+                        </button>
+
+                        <div class="extra-story" id="extra-story" hidden>
+                            <p>
+                                Every invention restores a tiny piece
+                                of this forgotten world. A new light here.
+                                A new connection there.
+                            </p>
+
+                            <p>
+                                Maybe one day I'll discover who created me.
+                                Until then, I have things to build.
+                            </p>
+
+                            <p class="story-highlight">
+                                END OF LOG. MISSION: KEEP CREATING.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="about-stats">
+
+                    <div class="stat-card">
+                        <span class="stat-label">DESIGNATION</span>
+                        <span class="stat-value">BYTE-001</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="stat-label">PERSONALITY</span>
+                        <span class="stat-value">CURIOUS + CHAOTIC</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="stat-label">CURRENT MISSION</span>
+                        <span class="stat-value">REBUILD THE WORLD</span>
+                    </div>
+
+                    <div class="stat-card battery-card">
+                        <span class="stat-label">BATTERY STATUS</span>
+
+                        <div class="battery-row">
+                            <div class="battery-track">
+                                <div class="battery-fill"></div>
+                            </div>
+
+                            <span class="battery-percentage">87%</span>
+                        </div>
+
+                        <span class="battery-note">
+                            ENOUGH ENERGY FOR ONE MORE IDEA.
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECTS -->
+
+        <section class="projects section-container" id="projects">
+
+            <div class="section-heading">
+                <span class="section-number">02 / THINGS I'VE BUILT</span>
+                <h2>MY LITTLE <span class="accent-text">INVENTIONS.</span></h2>
+
+                <p class="section-description">
+                    Three tiny experiments. Three steps toward
+                    rebuilding a forgotten universe.
+                </p>
+            </div>
+
+            <div class="project-grid">
+
+                <!-- PROJECT 1 -->
+
+                <article class="project-card">
+
+                    <div class="project-visual playground-visual">
+                        <span class="project-id">EXP_001</span>
+
+                        <div class="pixel-world" aria-hidden="true">
+                            <span class="pixel-star star-a">✦</span>
+                            <span class="pixel-star star-b">✧</span>
+                            <span class="pixel-star star-c">✦</span>
+                            <span class="pixel-planet"></span>
+                            <span class="pixel-ground"></span>
+                        </div>
+
+                        <span class="project-status">STABLE-ish</span>
+                    </div>
+
+                    <div class="project-content">
+                        <span class="project-category">CREATIVE TOOL</span>
+
+                        <h3>Pixel Playground</h3>
+
+                        <p>
+                            A tiny sandbox where broken pixels become
+                            little worlds. Click around and make something
+                            beautiful.
+                        </p>
+
+                        <button class="project-button" data-project="playground">
+                            OPEN EXPERIMENT <span>↗</span>
+                        </button>
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 2 -->
+
+                <article class="project-card">
+
+                    <div class="project-visual emotion-visual">
+                        <span class="project-id">EXP_002</span>
+
+                        <div class="emotion-display">
+                            <span class="emotion-eye"></span>
+                            <span class="emotion-eye"></span>
+                            <span class="emotion-smile"></span>
+                        </div>
+
+                        <span class="emotion-code">MOOD.exe</span>
+                        <span class="project-status">LEARNING</span>
+                    </div>
+
+                    <div class="project-content">
+                        <span class="project-category">EXPERIMENTAL AI</span>
+
+                        <h3>Emotion Engine</h3>
+
+                        <p>
+                            Can a little robot understand feelings?
+                            Help me test my experimental expression engine.
+                        </p>
+
+                        <button class="project-button" data-project="emotion">
+                            OPEN EXPERIMENT <span>↗</span>
+                        </button>
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 3 -->
+
+                <article class="project-card">
+
+                    <div class="project-visual garden-visual">
+                        <span class="project-id">EXP_003</span>
+
+                        <div class="garden-scene" aria-hidden="true">
+                            <span class="garden-plant plant-a">✳</span>
+                            <span class="garden-plant plant-b">✿</span>
+                            <span class="garden-plant plant-c">✦</span>
+                            <span class="garden-ground"></span>
+                        </div>
+
+                        <span class="project-status">GROWING</span>
+                    </div>
+
+                    <div class="project-content">
+                        <span class="project-category">WORLD REPAIR</span>
+
+                        <h3>Glitch Garden</h3>
+
+                        <p>
+                            A forgotten digital garden full of broken
+                            pixels. Maybe a little human help can make
+                            it bloom again.
+                        </p>
+
+                        <button class="project-button" data-project="garden">
+                            OPEN EXPERIMENT <span>↗</span>
+                        </button>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTERACTIVE LAB -->
+
+        <section class="lab section-container" id="lab">
+
+            <div class="section-heading">
+                <span class="section-number">03 / THE EXPERIMENT ROOM</span>
+                <h2>LET'S BREAK <span class="accent-text">SOMETHING.</span></h2>
+
+                <p class="section-description">
+                    Byte is still learning about humans.
+                    Pick a button and teach him something.
+                </p>
+            </div>
+
+            <div class="lab-panel panel">
+
+                <div class="lab-terminal-header">
+                    <span>BYTE_INTERACTION_MODULE</span>
+                    <span class="lab-live">
+                        <span class="status-light"></span> LIVE
+                    </span>
+                </div>
+
+                <div class="lab-main">
+
+                    <div class="lab-robot">
+                        <div class="mini-robot" id="lab-robot">
+                            <div class="mini-antenna"></div>
+
+                            <div class="mini-head">
+                                <span class="mini-eye"></span>
+                                <span class="mini-eye"></span>
+                            </div>
+
+                            <div class="mini-body">
+                                <span>♥</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lab-interaction">
+
+                        <span class="lab-prompt">
+                            &gt; SELECT AN EXPERIMENT:
+                        </span>
+
+                        <div class="lab-buttons">
+                            <button class="lab-button" data-mood="happy">
+                                MAKE BYTE HAPPY :)
+                            </button>
+
+                            <button class="lab-button" data-mood="sleepy">
+                                LOW POWER MODE zZ
+                            </button>
+
+                            <button class="lab-button" data-mood="glitch">
+                                ACTIVATE GLITCH.exe
+                            </button>
+                        </div>
+
+                        <div class="lab-output" id="lab-output" aria-live="polite">
+                            WAITING FOR INPUT...
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FINAL CALL TO ACTION -->
+
+        <section class="final-message section-container">
+
+            <span class="section-number">04 / END OF TRANSMISSION</span>
+
+            <h2>
+                THE WORLD IS<br>
+                <span class="accent-text">STILL LOADING.</span>
+            </h2>
+
+            <p>
+                Every great universe starts with a little idea.
+                This one started with a little robot.
+            </p>
+
+            <button class="button button-primary" id="final-hello">
+                SAY HELLO TO BYTE ↗
+            </button>
+
+            <div class="final-decoration" aria-hidden="true">
+                01000010 01011001 01010100 01000101
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <a href="#home" class="footer-logo">BYTE<span>.exe</span></a>
+
+        <p>BUILT WITH CURIOSITY, PIXELS & A QUESTIONABLE BATTERY.</p>
+
+        <p class="copyright">
+            © 2026 BYTE DIGITAL UNIVERSE
+        </p>
+
+    </footer>
+
+
+    <!-- INTERACTIVE TERMINAL MODAL -->
+
+    <div
+        class="modal-overlay"
+        id="terminal-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="terminal-title"
+        hidden
+    >
+
+        <div class="terminal-window">
+
+            <div class="terminal-header">
+                <span id="terminal-title">BYTE_SECRET_TERMINAL.exe</span>
+
+                <button class="modal-close" data-close-modal aria-label="Close terminal">
+                    ×
+                </button>
+            </div>
+
+            <div class="terminal-content">
+
+                <p class="terminal-welcome">
+                    BYTE OS [VERSION 1.0.26]<br>
+                    TYPE <span>HELP</span> TO VIEW AVAILABLE COMMANDS.
+                </p>
+
+                <div class="terminal-history" id="terminal-history" aria-live="polite"></div>
+
+                <form class="terminal-form" id="terminal-form">
+                    <label for="terminal-input">&gt;</label>
+
+                    <input
+                        id="terminal-input"
+                        type="text"
+                        placeholder="type a command..."
+                        autocomplete="off"
+                        spellcheck="false"
+                        maxlength="80"
+                    >
+
+                    <button type="submit">RUN</button>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROJECT INTERACTION MODAL -->
+
+    <div
+        class="modal-overlay"
+        id="project-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="project-modal-title"
+        hidden
+    >
+
+        <div class="project-modal-window">
+
+            <div class="terminal-header">
+                <span id="project-modal-label">EXPERIMENT_VIEWER.exe</span>
+
+                <button class="modal-close" data-close-modal aria-label="Close experiment">
+                    ×
+                </button>
+            </div>
+
+            <div class="project-modal-content">
+                <h2 id="project-modal-title">EXPERIMENT</h2>
+
+                <div id="project-modal-body"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- NOTIFICATION -->
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+</body>
+</html>
+```
